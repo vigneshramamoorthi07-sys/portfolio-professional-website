@@ -37,21 +37,21 @@ export default function Hero({ onOpenContact }) {
   }, [displayText, isDeleting, titleIndex]);
 
   return (
-    <section id="home" className="relative min-h-screen pt-28 pb-16 flex items-center overflow-hidden bg-grid-pattern">
+    <section id="home" className="relative min-h-screen pt-24 sm:pt-28 pb-12 sm:pb-16 flex items-center overflow-hidden bg-grid-pattern">
       {/* Background ambient lighting glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-brand-red/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/3 -right-20 w-[450px] h-[450px] bg-purple-600/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[700px] h-[300px] sm:h-[500px] bg-brand-red/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/3 -right-20 w-[250px] sm:w-[450px] h-[250px] sm:h-[450px] bg-purple-600/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
 
       {/* Massive Background Poster Wordmark like Reference Image ("PORTFOLIO") */}
-      <div className="absolute top-10 left-0 right-0 overflow-hidden select-none pointer-events-none z-0 flex justify-center opacity-25">
-        <span className="huge-title text-[15vw] sm:text-[18vw] leading-none tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-brand-red via-red-600/60 to-transparent">
+      <div className="absolute top-16 sm:top-10 left-0 right-0 overflow-hidden select-none pointer-events-none z-0 flex justify-center opacity-20 sm:opacity-25">
+        <span className="huge-title text-[20vw] sm:text-[18vw] leading-none tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-brand-red via-red-600/60 to-transparent">
           PORTFOLIO
         </span>
       </div>
 
       {/* Large Watermark Reference Portrait in Hero Background Center/Right */}
-      <div className="absolute top-0 right-0 w-full lg:w-3/5 h-full pointer-events-none z-0 overflow-hidden opacity-20 lg:opacity-35 flex items-center justify-end">
-        <div className="relative w-[500px] sm:w-[650px] lg:w-[800px] h-full flex items-center justify-center">
+      <div className="absolute top-0 right-0 w-full lg:w-3/5 h-full pointer-events-none z-0 overflow-hidden opacity-15 sm:opacity-20 lg:opacity-35 flex items-center justify-center lg:justify-end">
+        <div className="relative w-[320px] sm:w-[550px] lg:w-[800px] h-full flex items-center justify-center">
           <img 
             src="/vignesh-profile.jpg" 
             alt="Vignesh Background" 
@@ -66,7 +66,7 @@ export default function Hero({ onOpenContact }) {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Top bar meta pill */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-8 text-xs font-mono uppercase tracking-widest text-neutral-400 border-b border-white/10 pb-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4 mb-6 sm:mb-8 text-[11px] sm:text-xs font-mono uppercase tracking-widest text-neutral-400 border-b border-white/10 pb-3 sm:pb-4">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-brand-red animate-ping" />
             <span className="text-brand-red font-semibold">WEB DEVELOPER</span>
@@ -80,41 +80,41 @@ export default function Hero({ onOpenContact }) {
         </div>
 
         {/* Hero Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column: Typography & CTAs */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-red/10 border border-brand-red/20 text-brand-red text-xs font-semibold tracking-wider">
-              <Sparkles className="w-3.5 h-3.5" />
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-red/10 border border-brand-red/20 text-brand-red text-[11px] sm:text-xs font-semibold tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 shrink-0" />
               <span>HELLO, WORLD! WELCOME TO MY PORTFOLIO</span>
             </div>
 
-            <div className="space-y-2">
-              <span className="signature-font text-3xl sm:text-4xl text-neutral-300 block">
+            <div className="space-y-1 sm:space-y-2">
+              <span className="signature-font text-2xl sm:text-4xl text-neutral-300 block">
                 Hello, I'm
               </span>
-              <h1 className="huge-title text-5xl sm:text-7xl xl:text-8xl text-white tracking-tighter leading-none">
+              <h1 className="huge-title text-4xl sm:text-7xl xl:text-8xl text-white tracking-tighter leading-none">
                 VIGNESH
               </h1>
-              <div className="h-10 sm:h-12 flex items-center">
-                <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-rose-400 to-purple-400 font-display">
+              <div className="h-9 sm:h-12 flex items-center">
+                <span className="text-lg sm:text-2xl lg:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-rose-400 to-purple-400 font-display">
                   {displayText}
                 </span>
-                <span className="inline-block w-0.5 h-7 ml-1 bg-brand-red animate-pulse"></span>
+                <span className="inline-block w-0.5 h-6 sm:h-7 ml-1 bg-brand-red animate-pulse"></span>
               </div>
             </div>
 
-            {/* Subtitle / Description requested by user */}
-            <p className="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl font-normal">
+            {/* Subtitle / Description */}
+            <p className="text-sm sm:text-base lg:text-lg text-neutral-300 leading-relaxed max-w-2xl font-normal">
               Motivated and detail-oriented Computer Science graduate with practical experience in web development. 
               Passionate about creating responsive, user-friendly web applications and continuously improving technical skills.
             </p>
 
             {/* Two Main Call To Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
               <a
                 href="#projects"
-                className="group inline-flex items-center gap-3 px-7 py-3.5 rounded-full text-sm font-bold uppercase tracking-wider text-white bg-gradient-to-r from-brand-red to-brand-crimson shadow-xl shadow-brand-red/25 hover:shadow-brand-red/40 hover:scale-105 active:scale-95 transition-all border border-red-400/30"
+                className="group inline-flex items-center justify-center gap-3 px-6 sm:px-7 py-3.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider text-white bg-gradient-to-r from-brand-red to-brand-crimson shadow-xl shadow-brand-red/25 hover:shadow-brand-red/40 active:scale-95 transition-all border border-red-400/30 text-center"
               >
                 <span>Explore My Work</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -122,22 +122,22 @@ export default function Hero({ onOpenContact }) {
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-bold uppercase tracking-wider text-neutral-200 bg-white/5 hover:bg-white/10 hover:text-white border border-white/10 hover:border-white/20 active:scale-95 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider text-neutral-200 bg-white/5 hover:bg-white/10 hover:text-white border border-white/10 hover:border-white/20 active:scale-95 transition-all text-center"
               >
                 <Send className="w-4 h-4 text-brand-red" />
                 <span>Contact Me</span>
               </a>
             </div>
 
-            {/* Social Media Links with stylish pill style */}
-            <div className="flex items-center gap-4 pt-4 border-t border-white/5">
-              <span className="text-xs uppercase font-mono tracking-widest text-neutral-400">CONNECT:</span>
+            {/* Social Media Links */}
+            <div className="flex items-center gap-3 sm:gap-4 pt-3 sm:pt-4 border-t border-white/5">
+              <span className="text-[11px] sm:text-xs uppercase font-mono tracking-widest text-neutral-400">CONNECT:</span>
               <div className="flex items-center gap-2">
                 <a
                   href={PERSONAL_DETAILS.socials.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2.5 rounded-full bg-white/5 border border-white/10 text-neutral-300 hover:text-white hover:bg-white/10 hover:border-brand-red/50 transition-all group"
+                  className="p-2 sm:p-2.5 rounded-full bg-white/5 border border-white/10 text-neutral-300 hover:text-white hover:bg-white/10 hover:border-brand-red/50 transition-all group"
                   aria-label="GitHub Profile"
                 >
                   <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -146,14 +146,14 @@ export default function Hero({ onOpenContact }) {
                   href={PERSONAL_DETAILS.socials.linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2.5 rounded-full bg-white/5 border border-white/10 text-neutral-300 hover:text-white hover:bg-white/10 hover:border-brand-red/50 transition-all group"
+                  className="p-2 sm:p-2.5 rounded-full bg-white/5 border border-white/10 text-neutral-300 hover:text-white hover:bg-white/10 hover:border-brand-red/50 transition-all group"
                   aria-label="LinkedIn Profile"
                 >
                   <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 </a>
                 <a
                   href={PERSONAL_DETAILS.socials.email}
-                  className="p-2.5 rounded-full bg-white/5 border border-white/10 text-neutral-300 hover:text-white hover:bg-white/10 hover:border-brand-red/50 transition-all group"
+                  className="p-2 sm:p-2.5 rounded-full bg-white/5 border border-white/10 text-neutral-300 hover:text-white hover:bg-white/10 hover:border-brand-red/50 transition-all group"
                   aria-label="Email Me"
                 >
                   <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -162,8 +162,8 @@ export default function Hero({ onOpenContact }) {
             </div>
           </div>
 
-          {/* Right Column: Hero Visual Showcase (Matching Reference Image portrait styling exactly) */}
-          <div className="lg:col-span-5 relative">
+          {/* Right Column: Hero Visual Showcase */}
+          <div className="lg:col-span-5 relative mt-6 lg:mt-0">
             
             {/* Visual Glass Card Container */}
             <div className="relative mx-auto max-w-md rounded-3xl p-1 bg-gradient-to-b from-brand-red/40 via-white/10 to-transparent shadow-2xl">
@@ -241,17 +241,17 @@ export default function Hero({ onOpenContact }) {
         </div>
 
         {/* Highlight Stats Bar underneath Hero (Like reference image 3+ Years / 40+ Projects style) */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 p-4 sm:p-6 rounded-2xl bg-[#121217]/60 border border-white/10 backdrop-blur-xl">
+        <div className="mt-10 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 p-4 sm:p-6 rounded-2xl bg-[#121217]/60 border border-white/10 backdrop-blur-xl">
           {PERSONAL_DETAILS.stats.map((st, i) => (
-            <div key={i} className="flex items-center gap-4 px-3 py-2 border-r last:border-r-0 border-white/5">
-              <div className="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400 font-display">
+            <div key={i} className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 px-2 sm:px-3 py-2 sm:border-r last:border-r-0 border-white/5">
+              <div className="text-xl sm:text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400 font-display">
                 {st.value}
               </div>
               <div>
-                <span className="block text-[11px] font-bold tracking-wider text-brand-red uppercase font-mono">
+                <span className="block text-[10px] sm:text-[11px] font-bold tracking-wider text-brand-red uppercase font-mono">
                   {st.label}
                 </span>
-                <span className="block text-xs text-neutral-400">
+                <span className="block text-[11px] sm:text-xs text-neutral-400">
                   {st.subtext}
                 </span>
               </div>

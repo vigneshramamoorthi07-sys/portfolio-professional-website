@@ -120,7 +120,17 @@ export default function Navbar({ onOpenResume }) {
 
       {/* Mobile navigation panel */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0c0d12]/95 backdrop-blur-2xl border-b border-white/10 px-6 py-6 space-y-3 transition-all animate-fadeIn">
+        <div className="lg:hidden bg-[#0c0d12]/98 backdrop-blur-2xl border-b border-white/10 px-4 sm:px-6 py-6 space-y-2 transition-all animate-fadeIn shadow-2xl">
+          <div className="flex items-center gap-3 p-3 mb-2 rounded-xl bg-white/5 border border-white/5">
+            <div className="w-10 h-10 rounded-full p-[1.5px] bg-gradient-to-tr from-brand-red to-brand-purple overflow-hidden">
+              <img src="/vignesh-profile.jpg" alt="Vignesh" className="w-full h-full object-cover" />
+            </div>
+            <div>
+              <p className="text-sm font-bold text-white font-display uppercase tracking-wider">{PERSONAL_DETAILS.name}</p>
+              <p className="text-[10px] text-brand-red font-mono uppercase tracking-widest">{PERSONAL_DETAILS.profession}</p>
+            </div>
+          </div>
+
           {NAV_ITEMS.map((item) => {
             const isActive = activeSection === item.href.substring(1);
             return (

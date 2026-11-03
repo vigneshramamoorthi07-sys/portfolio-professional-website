@@ -51,11 +51,11 @@ export default function Projects({ onSelectProject }) {
         </div>
 
         {/* Projects Showcase Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10">
           {filteredProjects.map((project, idx) => (
             <div
               key={project.id}
-              className="group glass-card rounded-3xl overflow-hidden border border-white/10 flex flex-col justify-between hover:border-brand-red/40 transition-all duration-300"
+              className="group glass-card rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 flex flex-col justify-between hover:border-brand-red/40 transition-all duration-300"
             >
               <div>
                 {/* Mockup Showcase Banner */}
@@ -68,17 +68,17 @@ export default function Projects({ onSelectProject }) {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d12] via-transparent to-transparent opacity-80" />
                   
                   {/* Category Pill on image */}
-                  <div className="absolute top-4 left-4 flex items-center gap-2">
-                    <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase text-brand-red border border-white/10">
+                  <div className="absolute top-3 sm:top-4 left-3 sm:left-4 flex flex-wrap items-center gap-1.5 sm:gap-2">
+                    <span className="px-2.5 sm:px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[9px] sm:text-[10px] font-mono uppercase text-brand-red border border-white/10">
                       PROJECT 0{idx + 1}
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase text-white/80 border border-white/10">
+                    <span className="px-2.5 sm:px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[9px] sm:text-[10px] font-mono uppercase text-white/80 border border-white/10">
                       {project.category}
                     </span>
                   </div>
 
                   {/* Duration Badge */}
-                  <div className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-neutral-300 border border-white/10">
+                  <div className="absolute top-3 sm:top-4 right-3 sm:right-4 flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[9px] sm:text-[10px] font-mono text-neutral-300 border border-white/10">
                     <Calendar className="w-3 h-3 text-brand-red" />
                     <span>{project.duration}</span>
                   </div>
@@ -87,7 +87,7 @@ export default function Projects({ onSelectProject }) {
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40 backdrop-blur-xs">
                     <button
                       onClick={() => onSelectProject(project)}
-                      className="px-5 py-2.5 rounded-full bg-brand-red text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-2xl hover:scale-105 transition-all"
+                      className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-brand-red text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-2xl hover:scale-105 transition-all"
                     >
                       <Eye className="w-4 h-4" />
                       <span>View Project Details</span>
@@ -96,23 +96,23 @@ export default function Projects({ onSelectProject }) {
                 </div>
 
                 {/* Card Content */}
-                <div className="p-7 space-y-5">
+                <div className="p-5 sm:p-7 space-y-4 sm:space-y-5">
                   <div className="space-y-2">
                     <h3 
                       onClick={() => onSelectProject(project)}
-                      className="text-2xl font-bold text-white font-display hover:text-brand-red transition-colors cursor-pointer flex items-center justify-between"
+                      className="text-xl sm:text-2xl font-bold text-white font-display hover:text-brand-red transition-colors cursor-pointer flex items-center justify-between"
                     >
                       <span>{project.title}</span>
-                      <ArrowUpRight className="w-5 h-5 text-neutral-500 group-hover:text-brand-red group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                      <ArrowUpRight className="w-5 h-5 text-neutral-500 group-hover:text-brand-red group-hover:translate-x-1 group-hover:-translate-y-1 transition-all shrink-0" />
                     </h3>
-                    <p className="text-neutral-400 text-sm leading-relaxed">
+                    <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed">
                       {project.description}
                     </p>
                   </div>
 
                   {/* Key Features Bullet List */}
                   <div className="space-y-2 pt-2">
-                    <span className="text-[11px] font-mono uppercase text-brand-red tracking-wider block">
+                    <span className="text-[10px] sm:text-[11px] font-mono uppercase text-brand-red tracking-wider block">
                       KEY ARCHITECTURE & FEATURES:
                     </span>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-neutral-300">
@@ -130,7 +130,7 @@ export default function Projects({ onSelectProject }) {
                     {project.technologies.map((t) => (
                       <span
                         key={t}
-                        className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/5 border border-white/10 text-neutral-300"
+                        className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md text-[10px] sm:text-[11px] font-mono bg-white/5 border border-white/10 text-neutral-300"
                       >
                         {t}
                       </span>
@@ -140,7 +140,7 @@ export default function Projects({ onSelectProject }) {
               </div>
 
               {/* Action Buttons in footer of card */}
-              <div className="px-7 py-4 bg-[#121217]/80 border-t border-white/5 flex items-center justify-between gap-3">
+              <div className="px-5 sm:px-7 py-3.5 sm:py-4 bg-[#121217]/80 border-t border-white/5 flex flex-wrap items-center justify-between gap-3">
                 <button
                   onClick={() => onSelectProject(project)}
                   className="text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-brand-red transition-colors"
