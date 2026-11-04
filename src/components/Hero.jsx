@@ -227,7 +227,7 @@ export default function Hero({ onOpenContact }) {
                     <span className="block text-[10px] font-mono text-neutral-400 uppercase">Graduation</span>
                   </div>
                   <div className="border-r border-white/10 px-2">
-                    <span className="block text-lg font-extrabold text-brand-red font-display">6 Mos</span>
+                    <span className="block text-lg font-extrabold text-brand-red font-display">6 Months</span>
                     <span className="block text-[10px] font-mono text-neutral-400 uppercase">Internship</span>
                   </div>
                   <div className="pl-2">
