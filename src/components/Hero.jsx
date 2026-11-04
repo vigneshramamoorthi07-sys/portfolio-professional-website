@@ -180,7 +180,10 @@ export default function Hero({ onOpenContact }) {
                     <Terminal className="w-3 h-3 text-brand-red" />
                     vignesh_dev.sh
                   </span>
-                  <span className="text-[10px] text-brand-red font-mono font-bold">ACTIVE</span>
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="text-[10px] text-emerald-400 font-mono font-bold tracking-wider">ACTIVE</span>
+                  </div>
                 </div>
 
                 {/* Profile Graphic / Editorial Avatar Container with Vignesh's Photo */}
@@ -211,7 +214,7 @@ export default function Hero({ onOpenContact }) {
                       </p>
                     </div>
                     <span className="px-2.5 py-1 rounded-full bg-brand-red/20 border border-brand-red/40 text-[10px] font-mono font-semibold text-white">
-                      Class of 2023
+                      Year of 2023
                     </span>
                   </div>
 

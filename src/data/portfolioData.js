@@ -14,12 +14,12 @@ export const PERSONAL_DETAILS = {
   shortBio: "Hi, I'm Vignesh, an aspiring Web Developer passionate about building responsive, user-friendly, and visually appealing web applications. I have foundational knowledge of HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and SQL. I enjoy solving problems, learning new technologies, and transforming ideas into functional digital experiences.",
   detailedBio: "I'm Vignesh, a Computer Science graduate from Hindusthan College of Arts and Science. I am passionate about web development and enjoy building interactive, responsive, and user-friendly websites. I have hands-on experience with HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and SQL. During my six-month internship at Aimore Technologies, I gained practical exposure to web development and improved my technical and problem-solving abilities. I am a quick learner, creative thinker, and team player who is eager to explore new technologies and contribute to real-world projects.",
   socials: {
-    github: "https://github.com/vignesh-dev",
-    linkedin: "https://linkedin.com/in/vignesh-cs",
+    github: "https://github.com/vigneshramamoorthi07-sys",
+    linkedin: "https://www.linkedin.com/in/vignesh-r-3627a12a9",
     email: "mailto:vignesh.ramamoorthi07@gmail.com"
   },
   stats: [
-    { label: "DEGREE", value: "B.Sc CS", subtext: "Class of 2023" },
+    { label: "DEGREE", value: "B.Sc CS", subtext: "Year of 2023" },
     { label: "INTERNSHIP", value: "6 Months", subtext: "Web Dev Trainee" },
     { label: "PROJECTS", value: "2+", subtext: "Web Applications" },
     { label: "STATUS", value: "Ready to Join", subtext: "Immediate / Fresher" }
